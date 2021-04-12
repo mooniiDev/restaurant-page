@@ -1,0 +1,26 @@
+{
+  "name": "restaurant-page",
+  "version": "1.0.0",
+  "description": "A dynamically rendered restaurant homepage.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mooniiDev/restaurant-page.git"
+  },
+  "author": "mooniiDev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mooniiDev/restaurant-page/issues"
+  },
+  "homepage": "https://github.com/mooniiDev/restaurant-page#readme",
+  "devDependencies": {
+    "eslint": "^7.24.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "webpack": "^5.31.2",
+    "webpack-cli": "^4.6.0"
+  }
+}
