@@ -65,21 +65,22 @@ const render = (() => {
   }
 
   function listenClicks() {
-    const buttons = document.querySelectorAll('li');
     const content = document.querySelector('#content');
+    const buttons = document.querySelectorAll('li');
+    const footer = document.querySelector('#footer');
     buttons.forEach((button) => {
       button.addEventListener('click', () => {
         removePinkBorders();
         content.textContent = '';
         if (button.textContent === 'HOME') {
           const homeLink = document.querySelector('#link-0');
-          const footer = document.querySelector('#footer');
           homeLink.classList.add('pink-border');
           footer.classList.add('footer');
           home.render();
         } else if (button.textContent === 'MENU') {
           const menuLink = document.querySelector('#link-1');
           menuLink.classList.add('pink-border');
+          footer.classList.remove('footer');
           menu.render();
         } else if (button.textContent === 'CONTACT') {
           const contactLink = document.querySelector('#link-2');

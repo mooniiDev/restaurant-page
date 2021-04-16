@@ -102,18 +102,10 @@ h2 {
   padding: 0 50px;
   width: 470px;
 }
-.dish-name {
-  margin-bottom: 5px;
-  border-bottom: 2px solid var(--pink);
-}
-.dish-recipe {
-  margin-top: 0;
-  font-size: 18px;
-}
-#raspberry-kiss,
+#raspberry-hug,
 #choco-berry-dance,
 #strawberry-cuddle,
-#verry-cherry-hug {
+#verry-cherry-kiss {
   display: flex;
   height: 150px;
   background-color: rgb(226, 178, 218);

@@ -1,6 +1,6 @@
 const home = (() => {
   function render() {
-    const body = document.querySelector('#content');
+    const content = document.querySelector('#content');
     const aboutDiv = document.createElement('div');
     const aboutTxt = document.createElement('p');
     const br1 = document.createElement('br');
@@ -17,7 +17,7 @@ const home = (() => {
     aboutTxt.appendChild(br2);
     aboutTxt.appendChild(text3);
     aboutDiv.appendChild(aboutTxt);
-    body.appendChild(aboutDiv);
+    content.appendChild(aboutDiv);
   }
   return { render };
 })();
