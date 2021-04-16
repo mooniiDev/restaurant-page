@@ -2,8 +2,14 @@
   --white: #FFFFFF;
   --pink: #EB9CB7;
 }
+.white-border {
+  border-bottom: 2px solid var(--white);
+}
+.pink-border {
+  border-bottom: 2px solid var(--pink);
+}
 
-#content {
+body {
   min-height: 100vh;
   background: url('../images/good-mood-food-bg.jpg') no-repeat fixed center;
   background-size: cover;
@@ -11,14 +17,18 @@
   font-size: 20px;
   color: var(--white);
 }
+#content {
+  min-height: calc(100vh - 300px);
+}
 
+/* HEADER */
 #header {
   padding: 30px 0;
 }
 #logo {
   text-align: center;
 }
-
+/* NAVIGATION STYLE */
 #nav-bar {
   display: flex;
   justify-content: center;
@@ -30,8 +40,8 @@
   margin: 0 50px;
   padding: 0 10px;
   text-decoration: none;
+  font-weight: 300;
   color: var(--white);
-  border-bottom: 2px solid var(--white);
   transition: all 0.25s linear;
 }
 .nav-link:hover {
@@ -53,6 +63,7 @@
   transform: scale(1);
 }
 
+/* HOME */
 #about {
   padding: 200px 0;
   font-family: 'Oldenburg', cursive;
@@ -60,9 +71,62 @@
   text-align: center;
 }
 
-#footer {
-  margin-top: 200px;
+/* MENU */
+#menu {
+  margin: 0 auto;
+  padding-bottom: 25px;
+  width: 50%;
+  background: rgba(0, 0, 0, 0.8);
+  border: 3px solid var(--pink);
+  border-radius: 2px;
+}
+h1 {
+  display: none;
+}
+h2 {
+  margin-top: 40px;
+  font-family: 'Oldenburg', cursive;
   text-align: center;
+}
+#desserts,
+#drinks {
+  margin: 20px 0;
+}
+#desserts-cards,
+#drinks-cards {
+  display: flex;
+  justify-content: center;
+}
+#desserts-cards div,
+#drinks-cards div {
+  padding: 0 50px;
+  width: 470px;
+}
+.dish-name {
+  margin-bottom: 5px;
+  border-bottom: 2px solid var(--pink);
+}
+.dish-recipe {
+  margin-top: 0;
+  font-size: 18px;
+}
+#raspberry-kiss,
+#choco-berry-dance,
+#strawberry-cuddle,
+#verry-cherry-hug {
+  display: flex;
+  height: 150px;
+  background-color: rgb(226, 178, 218);
+}
+
+/* FOOTER */
+#footer {
+  text-align: center;
+  width: 100%;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
 }
 .footer-link {
   text-decoration: none;

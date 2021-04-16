@@ -1,11 +1,9 @@
 import home from './home';
+import menu from './menu';
 
 const render = (() => {
-  const body = document.querySelector('#content');
-
   function renderHeader() {
-    const header = document.createElement('header');
-    header.setAttribute('id', 'header');
+    const header = document.querySelector('header');
     // LOGO
     const logoDiv = document.createElement('div');
     const logo = document.createElement('img');
@@ -22,18 +20,17 @@ const render = (() => {
     navbarDiv.appendChild(ul);
     for (let i = 0; i < 3; i += 1) {
       const li = document.createElement('li');
-      li.classList.add('nav-link');
+      li.classList.add('nav-link', 'white-border');
+      li.setAttribute('id', `link-${[i]}`);
       li.textContent = navbarLinks[i];
       ul.appendChild(li);
     }
     header.appendChild(navbarDiv);
-    body.appendChild(header);
   }
 
   function renderFooter() {
-    const footer = document.createElement('footer');
+    const footer = document.querySelector('footer');
     const footerTxt = document.createElement('p');
-    footer.setAttribute('id', 'footer');
     // TEXT NODES
     const text1 = document.createTextNode('☽ Crafted by ');
     const text2 = document.createTextNode('mooniiDev ');
@@ -58,10 +55,42 @@ const render = (() => {
     footerTxt.appendChild(projectLink);
     footerTxt.appendChild(text5);
     footer.appendChild(footerTxt);
-    body.appendChild(footer);
+  }
+
+  function removePinkBorders() {
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach((link) => {
+      link.classList.remove('pink-border');
+    });
+  }
+
+  function listenClicks() {
+    const buttons = document.querySelectorAll('li');
+    const content = document.querySelector('#content');
+    buttons.forEach((button) => {
+      button.addEventListener('click', () => {
+        removePinkBorders();
+        content.textContent = '';
+        if (button.textContent === 'HOME') {
+          const homeLink = document.querySelector('#link-0');
+          const footer = document.querySelector('#footer');
+          homeLink.classList.add('pink-border');
+          footer.classList.add('footer');
+          home.render();
+        } else if (button.textContent === 'MENU') {
+          const menuLink = document.querySelector('#link-1');
+          menuLink.classList.add('pink-border');
+          menu.render();
+        } else if (button.textContent === 'CONTACT') {
+          const contactLink = document.querySelector('#link-2');
+          contactLink.classList.add('pink-border');
+        }
+      });
+    });
   }
 
   renderHeader();
   home.render();
   renderFooter();
+  listenClicks();
 })();
