@@ -8,6 +8,15 @@
 .pink-border {
   border-bottom: 2px solid var(--pink);
 }
+/* TEXT CENTERING */
+#logo,
+#about,
+h2,
+h3,
+#menu p,
+#footer {
+  text-align: center;
+}
 
 body {
   min-height: 100vh;
@@ -24,9 +33,6 @@ body {
 /* HEADER */
 #header {
   padding: 30px 0;
-}
-#logo {
-  text-align: center;
 }
 /* NAVIGATION STYLE */
 #nav-bar {
@@ -68,13 +74,12 @@ body {
   padding: 200px 0;
   font-family: 'Oldenburg', cursive;
   font-size: 30px;
-  text-align: center;
 }
 
 /* MENU */
 #menu {
   margin: 0 auto;
-  padding-bottom: 25px;
+  padding-bottom: 15px;
   width: 50%;
   background: rgba(0, 0, 0, 0.8);
   border: 3px solid var(--pink);
@@ -86,8 +91,8 @@ h1 {
 h2 {
   margin-top: 40px;
   font-family: 'Oldenburg', cursive;
-  text-align: center;
 }
+
 #desserts,
 #drinks {
   margin: 20px 0;
@@ -97,23 +102,28 @@ h2 {
   display: flex;
   justify-content: center;
 }
+#desserts-cards {
+  padding-bottom: 30px;
+  border-bottom: 2px solid var(--pink);
+}
 #desserts-cards div,
 #drinks-cards div {
   padding: 0 50px;
-  width: 470px;
 }
-#raspberry-hug,
-#choco-berry-dance,
-#strawberry-cuddle,
-#verry-cherry-kiss {
+.image-div {
   display: flex;
-  height: 150px;
-  background-color: rgb(226, 178, 218);
+  justify-content: center;
+  padding: 0;
+}
+#strawberry-hug,
+#verry-cherry-cuddle,
+#choco-berry-dance,
+#raspberry-kiss {
+  height: 180px;
 }
 
 /* FOOTER */
 #footer {
-  text-align: center;
   width: 100%;
 }
 .footer {
