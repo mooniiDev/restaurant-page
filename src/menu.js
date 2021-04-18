@@ -8,26 +8,26 @@ const menu = (() => {
     const dishes = [
       [
         {
-          name: 'RASPBERRY HUG, ',
+          name: 'STRAWBERRY HUG, ',
           price: '3€',
-          recipe: 'Crushed pretzels, heavy cream, raspberry sherbet, vanilla, whole raspberries.',
+          recipe: 'Crushed vegan pretzels, coconut cream, strawberry jam, vanilla, strawberries.',
         },
         {
-          name: 'CHOCO-BERRY DANCE, ',
-          price: '3.5€',
-          recipe: 'Dark cocoa, milk, butter, egg, vanilla, forest berries.',
+          name: 'VERRY CHERRY CUDDLE, ',
+          price: '4€',
+          recipe: 'Dark cocoa, almond milk, cocoa butter, cherries jam, vanilla, cherries.',
         },
       ],
       [
         {
-          name: 'STRAWBERRY CUDDLE, ',
-          price: '2.5€',
-          recipe: 'Milk, strawberry brandy, heavy cream, caramel frapuccino coffee.',
+          name: 'CHOCO-BERRY-DANCE, ',
+          price: '3€',
+          recipe: 'Dark cocoa, caramel, forest berries brandy, coconut cream.',
         },
         {
-          name: 'VERRY CHERRY KISS, ',
+          name: 'RASPBERRY KISS, ',
           price: '2€',
-          recipe: 'Milk, vanilla ice cream, cherries jam, frozen cherries, ice.',
+          recipe: 'Almond cream, raspberry sherbet, raspberry jam, frozen raspberries.',
         },
       ],
     ];
@@ -40,12 +40,14 @@ const menu = (() => {
     const dessert1 = document.createElement('div');
     const dessert1H3 = document.createElement('h3');
     const dessert1Recipe = document.createElement('p');
-    const dessert1Image = document.createElement('image');
+    const dessert1Image = document.createElement('img');
+    const dessert1ImageDiv = document.createElement('div');
     // DESSERT 2
     const dessert2 = document.createElement('div');
     const dessert2H3 = document.createElement('h3');
     const dessert2Recipe = document.createElement('p');
-    const dessert2Image = document.createElement('image');
+    const dessert2Image = document.createElement('img');
+    const dessert2ImageDiv = document.createElement('div');
     // CREATE DRINKS ELEMENTS
     const drinksDiv = document.createElement('div');
     const drinksH2 = document.createElement('h2');
@@ -54,12 +56,14 @@ const menu = (() => {
     const drink1 = document.createElement('div');
     const drink1H3 = document.createElement('h3');
     const drink1Recipe = document.createElement('p');
-    const drink1Image = document.createElement('image');
+    const drink1Image = document.createElement('img');
+    const drink1ImageDiv = document.createElement('div');
     // DRINK 2
     const drink2 = document.createElement('div');
     const drink2H3 = document.createElement('h3');
     const drink2Recipe = document.createElement('p');
-    const drink2Image = document.createElement('image');
+    const drink2Image = document.createElement('img');
+    const drink2ImageDiv = document.createElement('div');
 
     // CLASSES & ATTRIBUTES
     dishesMenu.setAttribute('id', 'menu');
@@ -74,27 +78,41 @@ const menu = (() => {
     // DESSERT 1
     dessert1H3.textContent = `${dishes[0][0].name}${dishes[0][0].price}`;
     dessert1Recipe.textContent = dishes[0][0].recipe;
-    dessert1Image.setAttribute('id', 'raspberry-hug');
+    dessert1Image.setAttribute('src', './images/strawberry-hug.png');
+    dessert1Image.setAttribute('id', 'strawberry-hug');
+    dessert1Image.setAttribute('alt', 'Strawberry Hug');
+    dessert1ImageDiv.setAttribute('class', 'image-div');
     // DESSERT 2
     dessert2H3.textContent = `${dishes[0][1].name}${dishes[0][1].price}`;
     dessert2Recipe.textContent = dishes[0][1].recipe;
-    dessert2Image.setAttribute('id', 'choco-berry-dance');
+    dessert2Image.setAttribute('src', './images/verry-cherry-cuddle.png');
+    dessert2Image.setAttribute('id', 'verry-cherry-cuddle');
+    dessert2Image.setAttribute('alt', 'Verry Cherry Cuddle');
+    dessert2ImageDiv.setAttribute('class', 'image-div');
     // DRINK 1
     drink1H3.textContent = `${dishes[1][0].name}${dishes[1][0].price}`;
     drink1Recipe.textContent = dishes[1][0].recipe;
-    drink1Image.setAttribute('id', 'strawberry-cuddle');
+    drink1Image.setAttribute('src', './images/choco-berry-dance.png');
+    drink1Image.setAttribute('id', 'choco-berry-dance');
+    drink1Image.setAttribute('alt', 'Choco Berry Dance');
+    drink1ImageDiv.setAttribute('class', 'image-div');
     // DRINK 2
     drink2H3.textContent = `${dishes[1][1].name}${dishes[1][1].price}`;
     drink2Recipe.textContent = dishes[1][1].recipe;
-    drink2Image.setAttribute('id', 'verry-cherry-kiss');
+    drink2Image.setAttribute('src', './images/raspberry-kiss.png');
+    drink2Image.setAttribute('id', 'raspberry-kiss');
+    drink2Image.setAttribute('alt', 'Raspberry Kiss');
+    drink2ImageDiv.setAttribute('class', 'image-div');
 
     // APPENDS
     dessert1.appendChild(dessert1H3);
     dessert1.appendChild(dessert1Recipe);
-    dessert1.appendChild(dessert1Image);
+    dessert1ImageDiv.appendChild(dessert1Image);
+    dessert1.appendChild(dessert1ImageDiv);
     dessert2.appendChild(dessert2H3);
     dessert2.appendChild(dessert2Recipe);
-    dessert2.appendChild(dessert2Image);
+    dessert2ImageDiv.appendChild(dessert2Image);
+    dessert2.appendChild(dessert2ImageDiv);
     dessertsCards.appendChild(dessert1);
     dessertsCards.appendChild(dessert2);
     dessertsDiv.appendChild(desserstsH2);
@@ -102,10 +120,12 @@ const menu = (() => {
 
     drink1.appendChild(drink1H3);
     drink1.appendChild(drink1Recipe);
-    drink1.appendChild(drink1Image);
+    drink1ImageDiv.appendChild(drink1Image);
+    drink1.appendChild(drink1ImageDiv);
     drink2.appendChild(drink2H3);
     drink2.appendChild(drink2Recipe);
-    drink2.appendChild(drink2Image);
+    drink2ImageDiv.appendChild(drink2Image);
+    drink2.appendChild(drink2ImageDiv);
     drinksCards.appendChild(drink1);
     drinksCards.appendChild(drink2);
     drinksDiv.appendChild(drinksH2);
@@ -116,7 +136,7 @@ const menu = (() => {
     dishesMenu.appendChild(drinksDiv);
     content.appendChild(dishesMenu);
 
-    // DISHES NAMES BORDER STYLE
+    // DISHES NAMES BORDER
     const allH3 = document.querySelectorAll('h3');
     allH3.forEach((h3) => {
       h3.classList.add('pink-border');
