@@ -2,7 +2,7 @@ const home = (() => {
   function render() {
     const content = document.querySelector('#content');
     const aboutDiv = document.createElement('div');
-    const aboutTxt = document.createElement('p');
+    const aboutTxt = document.createElement('h1');
     const br1 = document.createElement('br');
     const br2 = document.createElement('br');
     aboutDiv.setAttribute('id', 'about');

@@ -20,7 +20,7 @@ const menu = (() => {
       ],
       [
         {
-          name: 'CHOCO-BERRY-DANCE, ',
+          name: 'CHOCO-BERRY DANCE, ',
           price: '3€',
           recipe: 'Dark cocoa, caramel, forest berries brandy, coconut cream.',
         },

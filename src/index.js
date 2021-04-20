@@ -1,5 +1,6 @@
 import home from './home';
 import menu from './menu';
+import contact from './contact';
 
 const render = (() => {
   function renderHeader() {
@@ -85,6 +86,7 @@ const render = (() => {
         } else if (button.textContent === 'CONTACT') {
           const contactLink = document.querySelector('#link-2');
           contactLink.classList.add('pink-border');
+          contact.render();
         }
       });
     });
