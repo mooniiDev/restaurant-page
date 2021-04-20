@@ -8,6 +8,7 @@
 .pink-border {
   border-bottom: 2px solid var(--pink);
 }
+
 /* TEXT CENTERING */
 #logo,
 #about,
@@ -46,7 +47,7 @@ body {
   margin: 0 50px;
   padding: 0 10px;
   text-decoration: none;
-  font-weight: 300;
+  font-weight: 400;
   color: var(--white);
   transition: all 0.25s linear;
 }
@@ -75,18 +76,19 @@ body {
   font-family: 'Oldenburg', cursive;
   font-size: 30px;
 }
+#about h1 {
+  font-size: 35px;
+}
 
 /* MENU */
-#menu {
+#menu,
+#contact {
   margin: 0 auto;
   padding-bottom: 15px;
-  width: 50%;
+  max-width: 50%;
   background: rgba(0, 0, 0, 0.8);
   border: 3px solid var(--pink);
   border-radius: 2px;
-}
-h1 {
-  display: none;
 }
 h2 {
   margin-top: 40px;
@@ -120,6 +122,42 @@ h2 {
 #choco-berry-dance,
 #raspberry-kiss {
   height: 180px;
+}
+
+/* CONTACT */
+#contact {
+  display: flex;
+  padding: 40px;
+}
+#contacts {
+  display: flex;
+  flex-direction: column;
+}
+#contacts a {
+  text-decoration: none;
+}
+#contacts span {
+  padding-left: 10px;
+  font-family: 'Nunito', sans-serif;
+  color: var(--white);
+  font-size: 20px;
+  font-weight: 200;
+}
+.fal {
+  font-size: 30px;
+  color: var(--pink);
+  padding: 15px 0;
+}
+.fab {
+  padding-right: 5px;
+  font-size: 30px;
+  transition: 0.2s;
+}
+#contacts a:hover,
+#contacts i a span:hover,
+.fab:hover {
+  color: var(--pink);
+  transition: 0.2s;
 }
 
 /* FOOTER */
