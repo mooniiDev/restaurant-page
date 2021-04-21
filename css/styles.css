@@ -31,7 +31,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: calc(100vh - 300px);
 }
 
 /* HEADER */
@@ -76,11 +75,11 @@ body {
 
 /* HOME */
 #about {
+  margin-top: 200px;
   font-family: 'Oldenburg', cursive;
   font-size: 30px;
 }
 #about h1 {
-  margin: 0 0 100px 0;
   font-size: 35px;
 }
 
@@ -169,6 +168,9 @@ h2 {
 }
 
 /* FOOTER */
+#footer {
+  font-size: 17px;
+}
 .footer-link {
   text-decoration: none;
   color: var(--white);
