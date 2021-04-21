@@ -195,6 +195,9 @@ h2 {
   .nav-link {
     margin: 0 15px;
   }
+  #about {
+    margin-top: 50px;
+  }
   .dessert,
   .drink {
     padding: 5px 10px;
