@@ -6,10 +6,12 @@ const home = (() => {
     const br1 = document.createElement('br');
     const br2 = document.createElement('br');
     aboutDiv.setAttribute('id', 'about');
+
     // TEXT NODES
     const text1 = document.createTextNode('Eat Good Food');
     const text2 = document.createTextNode('&');
     const text3 = document.createTextNode('Lift Your Spirit!');
+
     // APPENDS
     aboutTxt.appendChild(text1);
     aboutTxt.appendChild(br1);

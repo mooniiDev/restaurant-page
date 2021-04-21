@@ -1,6 +1,6 @@
 const contact = (() => {
   function render() {
-    // CREATE CONTACT ELEMENTS
+    // CONTACT ELEMENTS
     const content = document.querySelector('#content');
     const contactDiv = document.createElement('div');
     const contacts = document.createElement('div');
@@ -46,17 +46,14 @@ const contact = (() => {
     contactDiv.setAttribute('id', 'contact');
     contacts.setAttribute('id', 'contacts');
 
-    // PHONE
     phone.classList.add('fal', 'fa-phone-alt');
     phoneLink.setAttribute('href', '');
     phoneSpan.textContent = '+1 420-777-4352';
 
-    // EMAIL
     email.classList.add('fal', 'fa-paper-plane');
     emailLink.setAttribute('href', '');
     emailSpan.textContent = 'hello@goodmoodfood.com';
 
-    // SOCIAL MEDIA
     social.classList.add('fal', 'fa-thumbs-up');
 
     facebookLink.setAttribute('href', 'https://www.facebook.com/thegoodmoodfoodaus/');
@@ -68,15 +65,12 @@ const contact = (() => {
     twitterLink.setAttribute('href', 'https://twitter.com/goodfoodforgood');
     twitter.classList.add('fab', 'fa-twitter');
 
-    // ADDRESS
     address.classList.add('fal', 'fa-map-marker-alt');
     addressSpan.textContent = 'Calle Desengano 11, 28004 Madrid, Spain';
 
-    // WORK HOURS
     time.classList.add('fal', 'fa-hourglass-half');
     timeSpan.textContent = 'EVERYDAY 06:00 - 23:00';
 
-    // MAP
     map.setAttribute('src', 'images/map.png');
     map.setAttribute('alt', 'Good Mood Food Map');
 
@@ -104,13 +98,13 @@ const contact = (() => {
 
     time.appendChild(timeSpan);
 
+    mapDiv.appendChild(map);
+
     contacts.appendChild(phone);
     contacts.appendChild(email);
     contacts.appendChild(social);
     contacts.appendChild(address);
     contacts.appendChild(time);
-
-    mapDiv.appendChild(map);
 
     contactDiv.appendChild(contacts);
     contactDiv.appendChild(mapDiv);
