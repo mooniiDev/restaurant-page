@@ -29,6 +29,9 @@ body {
   color: var(--white);
 }
 #content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   min-height: calc(100vh - 300px);
 }
 
@@ -40,6 +43,7 @@ body {
 #nav-bar {
   display: flex;
   justify-content: center;
+  margin-bottom: 0;
   padding: 10px 0;
   list-style-type: none;
 }
@@ -73,11 +77,12 @@ body {
 
 /* HOME */
 #about {
-  padding: 200px 0;
+  /* padding: 200px 0; */
   font-family: 'Oldenburg', cursive;
   font-size: 30px;
 }
 #about h1 {
+  margin: 0 0 100px 0;
   font-size: 35px;
 }
 
@@ -190,6 +195,7 @@ h2 {
   .nav-link {
     margin: 0 15px;
   }
+  #menu,
   #contact {
     margin: 0 20px;
   }
