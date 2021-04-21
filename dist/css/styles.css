@@ -186,6 +186,9 @@ h2 {
   .nav-link {
     margin: 0 25px;
   }
+  #about {
+    margin-top: 50px;
+  }
   #contact {
     margin: 0 100px;
   }
