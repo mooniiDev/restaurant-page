@@ -1,3 +1,4 @@
+/* COLORS */
 :root {
   --white: #FFFFFF;
   --pink: #EB9CB7;
@@ -83,39 +84,33 @@ body {
 /* MENU */
 #menu,
 #contact {
-  margin: 0 auto;
-  padding-bottom: 15px;
-  max-width: 50%;
+  margin: 0 325px;
   background: rgba(0, 0, 0, 0.8);
   border: 3px solid var(--pink);
   border-radius: 2px;
 }
 h2 {
-  margin-top: 40px;
   font-family: 'Oldenburg', cursive;
-}
-
-#desserts,
-#drinks {
-  margin: 20px 0;
 }
 #desserts-cards,
 #drinks-cards {
   display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
   justify-content: center;
+  padding-bottom: 30px;
 }
 #desserts-cards {
-  padding-bottom: 30px;
   border-bottom: 2px solid var(--pink);
 }
-#desserts-cards div,
-#drinks-cards div {
-  padding: 0 50px;
+.dessert,
+.drink {
+  padding: 10px 50px;
+  width: 528px;
 }
 .image-div {
   display: flex;
   justify-content: center;
-  padding: 0;
 }
 #strawberry-hug,
 #verry-cherry-cuddle,
@@ -127,17 +122,23 @@ h2 {
 /* CONTACT */
 #contact {
   display: flex;
-  padding: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 40px 0;
+}
+#contact div {
+  padding: 0 40px;
 }
 #contacts {
   display: flex;
   flex-direction: column;
+  padding-bottom: 40px;
 }
 #contacts a {
   text-decoration: none;
 }
 #contacts span {
-  padding-left: 10px;
+  padding-left: 20px;
   font-family: 'Nunito', sans-serif;
   color: var(--white);
   font-size: 20px;
@@ -146,7 +147,7 @@ h2 {
 .fal {
   font-size: 30px;
   color: var(--pink);
-  padding: 15px 0;
+  padding: 23px 0;
 }
 .fab {
   padding-right: 5px;
@@ -161,13 +162,6 @@ h2 {
 }
 
 /* FOOTER */
-#footer {
-  width: 100%;
-}
-.footer {
-  position: absolute;
-  bottom: 0;
-}
 .footer-link {
   text-decoration: none;
   color: var(--white);
