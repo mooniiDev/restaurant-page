@@ -127,7 +127,7 @@ h2 {
   padding: 40px 0;
 }
 #contact div {
-  padding: 0 40px;
+  padding: 20px 40px;
 }
 #contacts {
   display: flex;
@@ -160,6 +160,10 @@ h2 {
   color: var(--pink);
   transition: 0.2s;
 }
+#map-image {
+  max-width: 100%;
+  height: auto;
+}
 
 /* FOOTER */
 .footer-link {
@@ -170,4 +174,23 @@ h2 {
 .footer-link:hover {
   color: var(--pink);
   transition: 0.25s linear;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1240px) {
+  .nav-link {
+    margin: 0 25px;
+  }
+  #contact {
+    margin: 0 100px;
+  }
+}
+
+@media (max-width: 720px) {
+  .nav-link {
+    margin: 0 15px;
+  }
+  #contact {
+    margin: 0 20px;
+  }
 }

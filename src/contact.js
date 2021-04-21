@@ -71,6 +71,7 @@ const contact = (() => {
     time.classList.add('fal', 'fa-hourglass-half');
     timeSpan.textContent = 'EVERYDAY 06:00 - 23:00';
 
+    map.setAttribute('id', 'map-image');
     map.setAttribute('src', 'images/map.png');
     map.setAttribute('alt', 'Good Mood Food Map');
 
