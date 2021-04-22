@@ -80,7 +80,11 @@ body {
   font-size: 30px;
 }
 #about h1 {
+  margin: 0;
+  padding: 30px 15px;
   font-size: 35px;
+  border-top: 2px solid var(--pink);
+  border-bottom: 2px solid var(--pink);
 }
 
 /* MENU */
@@ -93,6 +97,9 @@ body {
 }
 h2 {
   font-family: 'Oldenburg', cursive;
+}
+h3 {
+  height: 35px;
 }
 #desserts-cards,
 #drinks-cards {
@@ -108,7 +115,7 @@ h2 {
 .dessert,
 .drink {
   padding: 10px 50px;
-  width: 528px;
+  width: 500px;
 }
 .image-div {
   display: flex;
@@ -126,7 +133,6 @@ h2 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 40px 0;
 }
 #contact div {
   padding: 20px 40px;
@@ -165,6 +171,7 @@ h2 {
 #map-image {
   max-width: 100%;
   height: auto;
+  border: 2px solid var(--pink);
 }
 
 /* FOOTER */
@@ -189,24 +196,28 @@ h2 {
   #about {
     margin-top: 100px;
   }
+  #menu {
+    margin: 0 200px;
+  }
   #contact {
-    margin: 0 100px;
+    margin: 0 200px;
   }
 }
 
 @media (max-width: 720px) {
   .nav-link {
-    margin: 0 15px;
+    margin: 0 10px;
   }
   #about {
     margin-top: 50px;
   }
+  h2 {
+    font-size: 25px;
+  }
   .dessert,
   .drink {
-    padding: 5px 10px;
+    padding: 10px 20px;
     width: 350px;
-  }
-  #contact {
-    margin: 0 20px;
+    font-size: 0.8em;
   }
 }
