@@ -153,9 +153,9 @@ h3 {
   font-weight: 200;
 }
 .fal {
+  padding: 23px 0;
   font-size: 30px;
   color: var(--pink);
-  padding: 23px 0;
 }
 .fab {
   padding-right: 5px;
