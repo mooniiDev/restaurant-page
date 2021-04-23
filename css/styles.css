@@ -75,7 +75,7 @@ body {
 
 /* HOME */
 #about {
-  margin-top: 200px;
+  margin-top: 150px;
   font-family: 'Oldenburg', cursive;
   font-size: 30px;
 }
@@ -205,6 +205,11 @@ h3 {
 }
 
 @media (max-width: 720px) {
+  body {
+    width: auto ;
+    max-width: 100% ;
+    height: auto ;
+  }
   .nav-link {
     margin: 0 10px;
   }
